@@ -10,48 +10,75 @@ This project enables users to ask natural language questions about company polic
 
 # Features
 Document-based question answering
+
 Semantic search using vector embeddings
+
 Persistent vector storage with ChromaDB
+
 Local inference using TinyLlama
+
 Retrieval-Augmented Generation (RAG) architecture
+
 No dependency on external APIs for inference
+
 # Tech Stack
 Python
+
 LangChain
+
 ChromaDB
+
 Hugging Face Transformers
+
 Sentence Transformers (all-MiniLM-L6-v2)
+
 TinyLlama-1.1B-Chat
+
 # Architecture
+
 Company Policy Documents
+
            │
            ▼
     Data Processing
+    
            │
            ▼
       Embeddings
  (all-MiniLM-L6-v2)
+ 
            │
            ▼
        ChromaDB
     Vector Database
+    
            │
            ▼
         Retriever
+        
            │
            ▼
       TinyLlama LLM
+      
            │
            ▼
      Generated Answer
+     
 # Workflow
 Load company policy data from a JSONL dataset.
+
 Convert records into LangChain documents.
+
 Generate embeddings using Sentence Transformers.
+
 Store embeddings in ChromaDB.
+
 Retrieve the most relevant documents for a user query.
+
 Pass retrieved context and query to TinyLlama.
+
 Generate a context-based answer.
+
 # Example
 
 Question
@@ -62,8 +89,13 @@ Answer
 
 Company policies are reviewed annually to ensure compliance with regulations, align with business objectives, and incorporate organizational changes.
 # Key Learning Outcomes
+
 Implemented an end-to-end RAG pipeline.
+
 Worked with vector databases and semantic search.
+
 Integrated open-source LLMs for document-based QA.
+
 Improved answer relevance by grounding responses in retrieved context.
+
 Gained hands-on experience with LangChain and Hugging Face ecosystems.
